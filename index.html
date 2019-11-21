@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Uk crime finder.</title>
+    <meta name="description" content="local crime events in big UK cities">
+</head>
+<body>
+    <main>
+        <h1>UK crime finder</h1>
+        <section id="crime-finder">
+            <article id="crime-event-howto">
+                <h2>How does it work?</h2>
+                <ol>
+                    <li>You can leave the fields blank and you'll get results for crimes committed in London, last month.</li>
+                    <li>Find the latitude and longitude of your desired city and insert them in the right input box. The bigger your city, the greater the chance of finding juicy crime reports.</li>
+                    <li>Enter the year and month of your request (just like the placeholder).</li>
+                    <li>Press submit.</li>
+                </ol>
+            </article>
+            <article id="crime-event-tool">
+            <form class ="inputform">
+                <input type="text" placeholder="Fill in your desired latitude!" class="input_text" id="inputLat">
+                <input type="text" placeholder="Fill in your desired longitude!" class="input_text" id="inputLng">
+                <input type="text" placeholder="yyyy-mm" class="input_text" id="inputDate">
+                <input type="button" value="submit" class="submit" id="submit-button">
+            </form>
+            </article>
+            <article id="crime-event-results-disclaimer">
+                <ul> Disclaimer:
+                    <li>No exact locations are displayed.</li>
+                    <li>If no results are displayed this means that there were no entries found, the database isn't always complete. Crimes of the current month are not available.</li>
+                    <li>If multiple locations are the same, this means that the crimes happened in a general vicinity of this central place.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    
+   <script src="javascript/script.js"></script>
+</body>
+</html>
