@@ -1,0 +1,91 @@
+.color-1 {color: #d0dce6;}
+
+html {
+    background-image:url(https://media.newyorker.com/photos/5b353b4efdf4c046b6f74d13/master/w_1298,c_limit/Burdick-TV-Crime.jpg);
+    color: #f1f3f1;
+    background-size:cover;
+
+}
+body {
+    margin:0;
+    display:flex;
+    justify-content: center;
+}
+body article {
+    margin: auto;
+    text-align:left;
+    max-width: 700px;
+
+}
+#crime-finder {
+    background-color:rgba(7, 31, 23, 0.7);
+    max-width:700px;
+}
+.result {
+    background-color:rgba(7, 31, 23, 0.7);
+    margin: auto;
+    text-align:left;
+    max-width: 700px;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    color:pink;
+}
+
+.inputform {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width:400px;
+    margin:auto;
+    padding:15px;
+    box-sizing:border-box;
+    justify-content: center;
+} 
+
+
+h1,h2 {
+    text-align:center;
+    color: #f1f3f1;
+    background-color:rgba(10, 46, 34, 0.6);
+    font-size: 3rem;
+    border-radius: 0.3%;
+    text-shadow: 1px 1px 2px #0a251e;
+    letter-spacing: 0.02em;
+    
+}
+h2 {
+    font-size: 1.5rem;
+}
+/* .inputform {
+    width: 100%;
+
+
+} */
+.input_text {
+        display: block;
+        margin: 0.2em;
+        padding: var(--inputPaddingV) var(--inputPaddingH);
+        color: inherit;
+        width: 100%;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: inherit;
+        line-height: 1.5em;
+        border: none;
+        border-radius: 0.4rem;
+        transition: box-shadow var(--transitionDuration);
+        background-color: rgba(42, 56, 51, 0.8)
+      }
+.input_text::placeholder {
+color: rgb(173, 175, 174);
+}
+.submit {
+    background-color:rgba(45, 47, 47, 0.9);
+    width:75px;
+    margin: 0.2em;
+    border: 1px;
+    border-radius:0.4rem;
+    color: #f1f3f1;
+    size: 150px;
+}

@@ -41,22 +41,34 @@
             usedLng = defaultLngLondon;
         } else usedLng = inputLng;
     })();
-    
+
      fetch(`https://data.police.uk/api/crimes-at-location?date=${usedDate}&lat=${usedLat}&lng=${usedLng}`)
     .then (response => response.json())
     .then (data => {
-        console.log(data);
-        console.log(usedDate);
-        console.log(usedLat);
-        console.log(usedLng);
 
-        let resultsDomContainer = document.querySelector("#crime-event-results-container")
-        // creates a "results" header in the DOM 
+        let resultsDomContainer = document.querySelector("#crime-event-results-container"); 
+        // creating a "results" header in the DOM 
         let resultsHeader = document.createElement("h2");
         let resultsHeaderTn = document.createTextNode(`Results for:${city}`);
+        let resultsContainer = document.createElement("div");
+        resultsContainer.className=".results-container"
         resultsHeader.appendChild(resultsHeaderTn);
         resultsDomContainer.appendChild(resultsHeader);
+        resultsDomContainer.appendChild(resultsContainer);
         
+        // creating elements in the DOM and groups them into a div
+        // a b c are passed from below in showResults 
+        function makeElements(a, b, c){
+            let resultsDiv = document.createElement("div");
+            resultsDiv.className =".result";
+            let typeOfCrimeTn = document.createTextNode(`${a}`);
+            let typeOfNeighbourhoodTn = document.createTextNode(`${b}`);
+            let typeOfOutcomeTn = document.createTextNode(`${c}`);
+            resultsDiv.appendChild(typeOfCrimeTn);
+            resultsDiv.appendChild(typeOfNeighbourhoodTn);
+            resultsDiv.appendChild(typeOfOutcomeTn);
+            resultsContainer.appendChild(resultsDiv);
+        };
         //function that gets results out of data list, 1 by 1.
         (function showResults(){
             for(let i=0;i<data.length;i++) {
@@ -66,22 +78,10 @@
                 console.log(typeOfNeighbourhood);
                 let typeOfOutcome = `${data[i]["outcome_status"]["category"]}`;
                 console.log(typeOfOutcome);
-                makeElements();
+                makeElements(typeOfCrime, typeOfNeighbourhood,typeOfOutcome); // important. these are abc (or any name) in makeElements function. otherwise you get a not defined error because the scope is defined when the function is made, not when its called.
             }
-        })();
-
-        (function makeElements(){
-            let resultsDiv = document.createElement("div");
-            let typeOfNeighbourhoodTn = document.createTextNode(`${typeOfNeighbourhood}`);
-            let typeOfCrimeTn = document.createTextNode(`${typeOfCrime}`);
-            let typeOfOutcomeTn = document.createTextNode(`${typeOfOutcome}`);
-            resultsDiv.appendChild(typeOfNeighbourhoodTn);
-            resultsDiv.appendChild(typeOfCrimeTn);
-            resultsDiv.appendChild(typeOfOutcomeTn);
-            resultsDomContainer.appendChild(resultsDiv);
-
-        })();
-       
+            })();
+        
     })
     .catch(err => console.error(err));
 });
