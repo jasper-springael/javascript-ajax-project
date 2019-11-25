@@ -7,22 +7,29 @@
     <title>Uk crime finder.</title>
     <meta name="description" content="local crime events in big UK cities">
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans|Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
     <main id="main">
-        <h1>UK crime finder</h1>
         <section id="crime-finder">
+            <h1>UK crime finder</h1>
+            <div id=container>
+                <div id=flip>
+                    <div><div>London</div></div>
+                    <div><div>Bristol</div></div>
+                    <div><div>Birmingham</div></div>
+                </div>
+            </div>
             <article id="crime-event-howto">
                 <h2>How does it work?</h2>
                 <ol>
                     <li>You can leave the fields blank and you'll get results for crimes committed in London, last month.</li>
-                    <li>Find the latitude and longitude of your desired city and insert them in the right input box. The bigger your city, the greater the chance of finding juicy crime reports.</li>
+                    <li>Find the latitude and longitude of your desired city in the UK and insert them in the right input box. Results are limited so the bigger your city, the greater the chance of finding juicy crime reports.</li>
                     <li>Enter the year and month of your request (just like the placeholder).</li>
                     <li>Press submit.</li>
                 </ol>
-            </article>
-            <article id="crime-event-tool">
-            <form class ="inputform">
+                <form class ="inputform">
+                    <input type="text" placeholder="City." class="input_text" id="inputCity">
                     <input type="text" placeholder="Latitude." class="input_text" id="inputLat">
                     <input type="text" placeholder="Longitude." class="input_text" id="inputLng">
                     <input type="text" placeholder="yyyy-mm" class="input_text" id="inputDate">
@@ -30,7 +37,8 @@
                 </form>
             </article>
             <article id="crime-event-results-disclaimer">
-                <ul> Disclaimer:
+                <h3>Disclaimer:</h3>
+                <ul> 
                     <li>No exact locations are displayed.</li>
                     <li>If no results are displayed this means that there were no entries found, the database isn't always complete. Crimes of the current month are not available.</li>
                     <li>If multiple locations are the same, this means that the crimes happened in the general vicinity of this central place.</li>
@@ -39,6 +47,11 @@
             <article id="crime-event-results-container">
             </article>
         </section>
+        <footer>
+                <div class="copyright">
+                  <p>&copy 2019 - Kosmonaut</p>
+                </div>
+        </footer>
     </main>
     
    <script src="javascript/script.js"></script>

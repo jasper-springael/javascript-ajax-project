@@ -1,35 +1,33 @@
-.color-1 {color: #d0dce6;}
+
 
 html {
     background-image:url(https://media.newyorker.com/photos/5b353b4efdf4c046b6f74d13/master/w_1298,c_limit/Burdick-TV-Crime.jpg);
     color: #f1f3f1;
     background-size:cover;
+    font-family: 'Raleway', sans-serif;
 
 }
 body {
-    margin:0;
     display:flex;
     justify-content: center;
+    padding:auto;
+
 }
 body article {
-    margin: auto;
+
     text-align:left;
     max-width: 700px;
 
+}
+main {
+    margin:auto;
+    padding:0;
 }
 #crime-finder {
     background-color:rgba(7, 31, 23, 0.7);
     max-width:700px;
-}
-.result {
-    background-color:rgba(7, 31, 23, 0.7);
-    margin: auto;
-    text-align:left;
-    max-width: 700px;
-    width:100%;
-    display:flex;
-    justify-content: center;
-    color:pink;
+    padding:0;
+    margin:0;
 }
 
 .inputform {
@@ -44,28 +42,36 @@ body article {
 } 
 
 
-h1,h2 {
+h1,h2,h3 {
     text-align:center;
-    color: #f1f3f1;
+    color: rgb(189, 192, 191);
     background-color:rgba(10, 46, 34, 0.6);
     font-size: 3rem;
     border-radius: 0.3%;
     text-shadow: 1px 1px 2px #0a251e;
     letter-spacing: 0.02em;
+    font-family: 'Merriweather Sans', sans-serif;
     
 }
-h2 {
-    font-size: 1.5rem;
+h1 {
+    margin:0;
+    padding:0;
+
 }
-/* .inputform {
-    width: 100%;
+h2 {
+    font-size: 1.7rem;
+    background-color:rgba(10, 46, 34, 0.7);
+    margin:0;
+}
+h3 {
+    font-size: 1.4rem;
+    display:block;
+    background-color:rgba(10, 46, 34, 0.4);
 
-
-} */
+}
 .input_text {
         display: block;
         margin: 0.2em;
-        padding: var(--inputPaddingV) var(--inputPaddingH);
         color: inherit;
         width: 100%;
         font-family: inherit;
@@ -75,10 +81,19 @@ h2 {
         border: none;
         border-radius: 0.4rem;
         transition: box-shadow var(--transitionDuration);
-        background-color: rgba(42, 56, 51, 0.8)
+        background-color: rgba(42, 56, 51, 0.8);
       }
+
 .input_text::placeholder {
 color: rgb(173, 175, 174);
+padding: 5px;
+}
+
+.input_text:hover {
+    background-color:rgba(23, 31, 28, 0.8);
+}
+.input_text:focus {
+    outline: thin dotted;
 }
 .submit {
     background-color:rgba(45, 47, 47, 0.9);
@@ -87,5 +102,85 @@ color: rgb(173, 175, 174);
     border: 1px;
     border-radius:0.4rem;
     color: #f1f3f1;
-    size: 150px;
 }
+.submit:hover {
+    background-color:rgba(23, 31, 28, 0.8);
+}
+
+.submit:focus {
+    outline: thin dotted;
+}
+
+#crime-event-results-disclaimer {
+    font-size: 0.85rem;
+}
+
+.result {
+    background-color:rgba(7, 31, 23, 0.7);
+    text-align: center;
+    max-width: 700px;
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+div.result:nth-child(even) {background:rgba(23, 31, 28, 0.8);}
+div.result:nth-child(odd) { background:rgba(42, 56, 51, 0.8)}
+
+.copyright {
+    background-color: rgba(7, 31, 23, 0.3);
+    line-height: 200%;
+    margin:0;
+    padding-left:3px;
+}
+
+/* copied and adapted*/
+#container {
+    text-transform: uppercase;
+    font-size:36px;
+    font-weight:bold;
+    width:100%;
+    bottom:45%;
+    display:block;
+    text-align: center;
+  }
+  
+  #flip {
+    height:50px;
+    overflow:hidden;
+    width:100%;
+  }
+  
+  #flip > div > div {
+    color:rgb(211, 200, 200);
+    padding:4px 12px;
+    height:45px;
+    margin-bottom:45px;
+    display:inline-block;
+  }
+  
+  #flip div:first-child {
+    animation: show 5s linear infinite;
+  }
+  
+  #flip div div {
+    background:#3cb47e;
+  }
+  #flip div:first-child div {
+    background:#3fa7cc;
+  }
+  #flip div:last-child div {
+    background:rgb(160, 17, 45);
+  }
+  
+  @keyframes show {
+    0% {margin-top:-270px;}
+    5% {margin-top:-180px;}
+    33% {margin-top:-180px;}
+    38% {margin-top:-90px;}
+    66% {margin-top:-90px;}
+    71% {margin-top:0px;}
+    99.99% {margin-top:0px;}
+    100% {margin-top:-270px;}
+  }
+  
