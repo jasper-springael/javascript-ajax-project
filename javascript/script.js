@@ -26,10 +26,8 @@ function createResults () {
                 return defaultDate;
             })();
             usedDate = defaultDate;
-            console.log(usedDate);
         } else {
             usedDate = inputDate;
-            console.log(usedDate);
         }
     })();
 
@@ -108,16 +106,13 @@ function createResults () {
                 let typeOfCrimePre = `${data[i]["category"]}`;
                 typeOfCrimePre = typeOfCrimePre.split("-").join(" ");
                 const typeOfCrime = typeOfCrimePre.charAt(0).toUpperCase() + typeOfCrimePre.substring(1);
-                console.log(typeOfCrime);
                 let typeOfNeighbourhood = `${data[i]["location"]["street"]["name"]}`;
-                console.log(typeOfNeighbourhood);
                 let typeOfOutcome = `${data[i]["outcome_status"]["category"]}`;
-                console.log(typeOfOutcome);
                 makeElements(typeOfCrime, typeOfNeighbourhood,typeOfOutcome); // important. these are abc (or any name) in makeElements function. otherwise you get a not defined error because the scope is defined when the function is made, not when its called.
             }
         })();
     })
-    .catch(err => console.error(err));
+    .catch(err => alert(err));
     }
 
 
