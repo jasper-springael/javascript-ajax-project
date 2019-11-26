@@ -2,7 +2,7 @@
 
 ### Introduction
 When we got the assignment, my first thought was... I don't want to make a weather app and I don't want to make a movie database.
-While you can definitely make interesting projects about these subjects and in the meantime practice javascript.. I wanted to work a bit more out of the box, to not only challenge my coding skills but also start practicing how to come up with different kinds of ideas.
+While you can definitely make interesting projects about these subjects and in the meantime practice javascript.. I wanted to work a bit more out of the box, to not only challenge my coding skills but also have some fun and start practicing how to come up with different kinds of ideas.
 
 Another thing I immediately decided was: I'm going to use base css and not bootstrap or sass, just to resfresh those base css skills.
 
@@ -11,7 +11,7 @@ Another thing I immediately decided was: I'm going to use base css and not boots
 ##### Day 1
 
 General concepts phase. Tried out many idea's/API's. Noticed many of the free API's are pretty doodoo.
-Didn't really start coding until day 2.
+Didn't really start coding until day 2. Since the assignment description mentioned a start-up with monetization possibilites, the final concept I went with was a local crime finder, displaying the types of crimes in your city/block. Depending on your results you would get suggestions from an e-shop regarding safety measures. For instance, a city/neighbourhood where a lot of bicycle theft happens would get suggestions like bike locks, removeable lights/saddle's etc.
 
 ##### Day 2
 
