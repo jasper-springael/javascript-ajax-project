@@ -5,28 +5,27 @@ html {
     color: #f1f3f1;
     background-size:cover;
     font-family: 'Raleway', sans-serif;
-
-}
-body {
-    display:flex;
-    justify-content: center;
-    padding:auto;
-
-}
-body article {
-
-    text-align:left;
-    max-width: 700px;
-
+    width:100%;
 }
 main {
     margin:auto;
     padding:0;
+    overflow:hidden;
+}
+body {
+    display:flex;
+    justify-content: center;
+    text-align:left;
+}
+body article li {
+    padding-right:10px;
+}
+body article ul {
+    padding-bottom:15px;
 }
 #crime-finder {
     background-color:rgba(7, 31, 23, 0.7);
-    max-width:700px;
-    padding:0;
+    max-width:700px;  
     margin:0;
 }
 
@@ -51,6 +50,8 @@ h1,h2,h3 {
     text-shadow: 1px 1px 2px #0a251e;
     letter-spacing: 0.02em;
     font-family: 'Merriweather Sans', sans-serif;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
     
 }
 h1 {
@@ -66,22 +67,21 @@ h2 {
 h3 {
     font-size: 1.4rem;
     display:block;
-    background-color:rgba(10, 46, 34, 0.4);
+    background-color:rgba(10, 46, 34, 0.5);
 
 }
 .input_text {
         display: block;
         margin: 0.2em;
         color: inherit;
-        width: 100%;
         font-family: inherit;
         font-size: 1rem;
         font-weight: inherit;
         line-height: 1.5em;
         border: none;
         border-radius: 0.4rem;
-        transition: box-shadow var(--transitionDuration);
         background-color: rgba(42, 56, 51, 0.8);
+        padding:5px;
       }
 
 .input_text::placeholder {
@@ -113,7 +113,7 @@ label[for="inputDate"] {
 }
 .submit {
     background-color:rgba(45, 47, 47, 0.9);
-    width:75px;
+    width:80px;
     margin: 0.2em;
     border: 1px;
     border-radius:0.4rem;
@@ -127,8 +127,10 @@ label[for="inputDate"] {
     outline: thin dotted;
 }
 
-#crime-event-results-disclaimer {
+#crime-event-results-disclaimer p {
     font-size: 0.85rem;
+    padding-bottom: 5px;
+    padding-right: 20px;
 }
 
 .result {
@@ -139,7 +141,10 @@ label[for="inputDate"] {
     display:flex;
     justify-content: space-evenly;
 }
-
+.resultChild {
+    max-width: 230px;
+    width:100%;
+}
 div.result:nth-child(even) {background:rgba(23, 31, 28, 0.8);}
 div.result:nth-child(odd) { background:rgba(42, 56, 51, 0.8)}
 

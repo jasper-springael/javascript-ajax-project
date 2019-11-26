@@ -79,7 +79,7 @@ function createResults () {
             let resultsDivNeighbourhood= document.createElement("div");
             resultsDivNeighbourhood.className = "resultChild"
             let typeOfNeighbourhoodHeader= document.createElement("h3");
-            let typeOfNeighbourhoodHeaderTn= document.createTextNode(`In the vicinity of: `);
+            let typeOfNeighbourhoodHeaderTn= document.createTextNode(`In vicinity of: `);
             let typeOfNeighbourhoodP = document.createElement("p");
             typeOfNeighbourhoodP.textContent= `${b}`;
             let resultsDivOutcome= document.createElement("div");
