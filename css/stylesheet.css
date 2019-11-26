@@ -96,14 +96,20 @@ padding: 5px;
     outline: thin dotted;
 }
 label[for="inputCity"] { 
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
+    height: 0.1px;
     overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+}
+label[for="inputLat"] { 
+    height: 0.1px;
+    overflow: hidden;
+}
+label[for="inputLng"] { 
+    height: 0.1px;
+    overflow: hidden;
+}
+label[for="inputDate"] { 
+    height: 0.1px;
+    overflow: hidden;
 }
 .submit {
     background-color:rgba(45, 47, 47, 0.9);
@@ -174,13 +180,13 @@ div.result:nth-child(odd) { background:rgba(42, 56, 51, 0.8)}
   }
   
   #flip div div {
-    background:#3cb47e;
+    background:#2f8674;
   }
   #flip div:first-child div {
-    background:#3fa7cc;
+    background:#415a92;
   }
   #flip div:last-child div {
-    background:rgb(160, 17, 45);
+    background:rgb(102, 21, 37);
   }
   
   @keyframes show {
