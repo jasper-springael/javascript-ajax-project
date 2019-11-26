@@ -95,6 +95,16 @@ padding: 5px;
 .input_text:focus {
     outline: thin dotted;
 }
+label[for="inputCity"] { 
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
 .submit {
     background-color:rgba(45, 47, 47, 0.9);
     width:75px;
